@@ -9,6 +9,11 @@ body {
   letter-spacing: -0.03em;
   background-color: #f5f5f5;
 }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 .navbar {
   display: flex;
@@ -100,10 +105,16 @@ body {
   margin-bottom: 150px;
   margin-left: 125px;
 }
-
+.section {
+  margin-bottom: 90px;
+  padding: 0 10px;
+}
 .img-section {
-  width: 1150px;
-  height: 450px;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
   margin-bottom: 15px;
 }
 
@@ -117,12 +128,9 @@ body {
   text-decoration: none;
 }
 
-.section {
-  margin-bottom: 90px;
-}
-
 .btn-section {
-  width: 1150px;
+  width: 100%;
+  max-width: 1150px;
   height: 153px;
   font-size: 30px;
   color: #ad1818;
@@ -160,6 +168,13 @@ body {
   margin-bottom: 60px;
   text-decoration: none;
   color: #f5f5f5;
+}
+.block-services-element img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
 }
 .block-services-element__title {
   margin-top: 15px;
@@ -240,4 +255,238 @@ body {
   text-align: center;
   color: #ffff;
   opacity: 50%;
+}
+
+@media (max-width: 1200px) {
+  .navbar,
+  .block-main-container,
+  .header-container,
+  .inner-container,
+  .first-section,
+  .img-section,
+  .btn-section,
+  .icon,
+  .contacts {
+    margin-left: 50px;
+    width: auto;
+  }
+
+  .block-services-element {
+    width: 100%;
+  }
+  .menu-info {
+    margin-left: 0;
+  }
+
+  .title {
+    font-size: 50px;
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-left: 25px;
+  }
+
+  .menu {
+    gap: 20px;
+  }
+
+  .menu a {
+    font-size: 16px;
+  }
+  .block-services-element {
+    width: auto;
+    margin-bottom: 40px;
+  }
+  .block-main-container {
+    height: 400px;
+  }
+
+  .about-text {
+    font-size: 35px;
+    line-height: 50px;
+  }
+
+  .text-container {
+    padding: 300px 20px;
+  }
+
+  .btn {
+    width: 200px;
+    height: 50px;
+  }
+
+  .text-section {
+    font-size: 25px;
+  }
+  .img-section {
+    height: auto; /* Высота будет автоматически подстраиваться */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+
+  .menu {
+    gap: 15px;
+  }
+
+  .title {
+    font-size: 40px;
+    margin-left: 20px;
+    width: 100%;
+  }
+  .block-services-element {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .block-services-element__title {
+    font-size: 18px;
+  }
+  .block-main-container {
+    height: 300px;
+  }
+
+  .text-container {
+    padding: 220px 10px;
+    font-size: 16px;
+  }
+
+  .about-text {
+    font-size: 28px;
+    margin-bottom: 50px;
+  }
+
+  .btn {
+    width: 180px;
+    height: 45px;
+  }
+
+  .btn-section {
+    font-size: 24px;
+    height: 120px;
+    width: 100%;
+  }
+  .section {
+    margin-bottom: 20px;
+    padding: 0 5px; /* Уменьшить отступы */
+  }
+
+  .details-section {
+    font-size: 12px;
+    text-align: center; /* Центрирование ссылок */
+  }
+
+  .text-section {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .img-section {
+    height: auto;
+  }
+
+  .icon,
+  .contacts {
+    margin-left: 20px;
+  }
+
+  .menu-info {
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 50px;
+    padding-top: 40px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar,
+  .block-main-container,
+  .text-container,
+  .title,
+  .contacts,
+  .icon {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+  }
+
+  .menu a {
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 30px;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .block-services-element {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .block-services-element__title {
+    font-size: 16px;
+  }
+  .block-main-container {
+    height: 250px;
+  }
+
+  .text-container {
+    padding: 150px 5px;
+    font-size: 14px;
+  }
+
+  .about-text {
+    font-size: 24px;
+  }
+
+  .btn {
+    width: 150px;
+    height: 40px;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .btn-section {
+    font-size: 18px;
+    height: 100px;
+    width: 100%;
+  }
+
+  .section {
+    padding: 0 5px;
+  }
+
+  .img-section {
+    max-width: 100%;
+    height: auto; /* Убедиться, что изображения масштабируются */
+  }
+
+  .text-section {
+    font-size: 12px;
+  }
+  .img-section {
+    max-width: 100%;
+    height: auto;
+  }
+  .details-section {
+    font-size: 10px;
+  }
+  .menu-info {
+    text-align: center;
+  }
+  .info-contacts {
+    text-align: center;
+  }
 }

@@ -9,12 +9,14 @@ body {
   letter-spacing: -0.03em;
   background-color: #f5f5f5;
 }
+
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
+/* Начало меню */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -23,21 +25,93 @@ img {
   margin-left: 125px;
   margin-bottom: 70px;
   width: 1150px;
+  position: relative; /* Позволяет меню позиционироваться относительно родителя */
 }
 
 .menu {
-  display: flex;
+  display: flex; /* По умолчанию меню будет видно на десктопе */
   gap: 60px;
   font-size: 18px;
 }
+
 .menu a {
   text-decoration: none;
   color: #121212;
 }
+
 .menu a:hover {
   color: #007bff;
 }
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
 
+/* Мобильные стили */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    text-align: center;
+  }
+  .menu a {
+    display: block;
+    margin: 10px 0;
+  }
+  .hamburger {
+    display: block;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  .menu.active {
+    display: flex;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+  }
+  .menu a {
+    display: block;
+    margin: 10px 0;
+  }
+  .hamburger {
+    display: block;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  .menu.active {
+    display: flex;
+  }
+}
+/* Конец меню */
+
+/* Начало шапки */
 .title {
   width: 956px;
   height: 120px;
@@ -57,20 +131,49 @@ img {
   width: 1150px;
   height: 500px;
   background-image: url(../resources/Rectangle1.png);
-  background-size: contain;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
   margin-bottom: 150px;
   margin-left: 125px;
 }
+
 .text-container {
   width: 430px;
-  height: 81px;
   color: white;
   padding: 379px 40px;
   font-size: 20px;
 }
+@media (max-width: 768px) {
+  .title {
+    font-size: 40px;
+    margin-left: 20px;
+    width: 100%;
+  }
+  .block-main-container {
+    height: 300px;
+  }
+  .text-container {
+    padding: 220px 10px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .title {
+    font-size: 30px;
+    margin-left: 10px;
+    width: 100%;
+  }
+  .block-main-container {
+    height: 250px;
+  }
+  .text-container {
+    padding: 150px 10px;
+    font-size: 14px;
+  }
+}
+/* Конец шапки */
 
+/* Начало о компании */
 .header-container {
   margin-bottom: 150px;
   margin-left: 125px;
@@ -92,23 +195,48 @@ img {
   color: white;
   background-color: #ad1818;
   border-radius: 5px;
-  padding: 20px 40px 20px 40px;
+  padding: 20px 40px;
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
+
 .btn:hover {
   background-color: #007bff;
 }
+@media (max-width: 768px) {
+  .about-text {
+    font-size: 28px;
+    margin-bottom: 50px;
+  }
+  .btn {
+    width: 150px;
+    height: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .about-text {
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
+  .btn {
+    width: 130px;
+    height: 35px;
+  }
+}
+/* Конец о компании */
 
+/* Начало проекты */
 .first-section {
   margin-bottom: 150px;
   margin-left: 125px;
 }
+
 .section {
   margin-bottom: 90px;
   padding: 0 10px;
 }
+
 .img-section {
   max-width: 100%;
   width: 100%;
@@ -122,6 +250,7 @@ img {
   font-size: 30px;
   margin-bottom: 15px;
 }
+
 .details-section {
   font-size: 20px;
   color: #ad1818;
@@ -145,7 +274,9 @@ img {
   background-color: #bbc6d1;
   border-color: darkred;
 }
+/* Конец проекты */
 
+/* Начало услуги */
 .overlay-container {
   position: relative;
   width: 100%;
@@ -155,13 +286,16 @@ img {
   padding-top: 150px;
   padding-bottom: 150px;
 }
+
 .inner-container {
   margin-left: 125px;
 }
+
 .block-services__h2 {
   margin-bottom: 30px;
   color: #f5f5f5;
 }
+
 .block-services-element {
   display: block;
   width: 1150px;
@@ -169,6 +303,7 @@ img {
   text-decoration: none;
   color: #f5f5f5;
 }
+
 .block-services-element img {
   width: 100%;
   height: auto;
@@ -176,12 +311,16 @@ img {
   display: block;
   object-fit: cover;
 }
+
 .block-services-element__title {
   margin-top: 15px;
   font-size: 30px;
   line-height: 41px;
   color: #f5f5f5;
 }
+/* Конец услуги */
+
+/* Начало под услуги */
 .full-screen-img {
   height: 717px;
   background-image: url(../resources/image.png);
@@ -190,6 +329,7 @@ img {
   background-position: 50% 50%;
   margin-bottom: 150px;
 }
+
 .full-screen-text {
   width: 443px;
   height: 82px;
@@ -197,30 +337,37 @@ img {
   font-size: 30px;
   padding: 575px 125px;
 }
+/* Конец под услуги */
+
 .icon {
   margin-left: 125px;
   margin-bottom: 12px;
 }
+
 .contacts {
   width: 473px;
   margin-left: 125px;
   margin-bottom: 150px;
 }
+
 .contact-text {
   font-size: 18px;
   color: #121212;
   margin-bottom: 32px;
 }
+
 .display-adress {
   display: flex;
   flex-direction: column;
 }
+
 .number {
   font-size: 60px;
   color: #121212;
   text-decoration: none;
   margin-bottom: 30px;
 }
+
 .email {
   font-size: 60px;
   color: #121212;
@@ -229,14 +376,15 @@ img {
   border-bottom: 2px solid black;
   padding-bottom: 10px;
 }
+
 .info-contacts {
   height: 229px;
   background-color: #121212;
 }
+
 .menu-info {
   font-size: 18px;
-  padding-bottom: 87px;
-  padding-top: 60px;
+  padding: 60px 0 87px 0;
   display: flex;
   gap: 60px;
   margin-left: 470px;
@@ -246,6 +394,7 @@ img {
   text-decoration: none;
   color: #ffff;
 }
+
 .menu-info a:hover {
   color: #007bff;
 }
@@ -257,6 +406,7 @@ img {
   opacity: 50%;
 }
 
+/* Адаптивные стили */
 @media (max-width: 1200px) {
   .navbar,
   .block-main-container,
@@ -274,6 +424,7 @@ img {
   .block-services-element {
     width: 100%;
   }
+
   .menu-info {
     margin-left: 0;
   }
@@ -299,10 +450,12 @@ img {
   .menu a {
     font-size: 16px;
   }
+
   .block-services-element {
     width: auto;
     margin-bottom: 40px;
   }
+
   .block-main-container {
     height: 400px;
   }
@@ -324,27 +477,9 @@ img {
   .text-section {
     font-size: 25px;
   }
-  .img-section {
-    height: auto; /* Высота будет автоматически подстраиваться */
-  }
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 20px;
-  }
-
-  .menu {
-    gap: 15px;
-  }
-
-  .title {
-    font-size: 40px;
-    margin-left: 20px;
-    width: 100%;
-  }
   .block-services-element {
     width: 100%;
     margin-bottom: 30px;
@@ -352,141 +487,30 @@ img {
   .block-services-element__title {
     font-size: 18px;
   }
-  .block-main-container {
-    height: 300px;
-  }
-
-  .text-container {
-    padding: 220px 10px;
-    font-size: 16px;
-  }
-
-  .about-text {
-    font-size: 28px;
-    margin-bottom: 50px;
-  }
-
-  .btn {
-    width: 180px;
-    height: 45px;
-  }
-
-  .btn-section {
-    font-size: 24px;
-    height: 120px;
-    width: 100%;
-  }
-  .section {
-    margin-bottom: 20px;
-    padding: 0 5px; /* Уменьшить отступы */
-  }
-
-  .details-section {
-    font-size: 12px;
-    text-align: center; /* Центрирование ссылок */
-  }
-
-  .text-section {
-    font-size: 14px;
-    text-align: center;
-  }
-
-  .img-section {
-    height: auto;
-  }
-
-  .icon,
-  .contacts {
-    margin-left: 20px;
-  }
-
-  .menu-info {
-    flex-direction: column;
-    gap: 20px;
-    padding-bottom: 50px;
-    padding-top: 40px;
-    margin-left: 0;
+  .first-section {
+    margin-bottom: 100px;
   }
 }
-
 @media (max-width: 576px) {
-  .navbar,
-  .block-main-container,
-  .text-container,
-  .title,
-  .contacts,
-  .icon {
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 100%;
+  .block-services-element__title {
+    font-size: 16px;
   }
-
-  .menu a {
+  .text-container {
+    padding: 150px 10px;
     font-size: 14px;
   }
-
-  .title {
-    font-size: 30px;
-    text-align: center;
-    margin-left: 0;
-    margin-right: 0;
+  .about-text {
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
+  .text-section {
+    font-size: 20px;
   }
   .block-services-element {
     width: 100%;
     margin-bottom: 20px;
   }
-  .block-services-element__title {
-    font-size: 16px;
-  }
-  .block-main-container {
-    height: 250px;
-  }
-
-  .text-container {
-    padding: 150px 5px;
-    font-size: 14px;
-  }
-
-  .about-text {
-    font-size: 24px;
-  }
-
-  .btn {
-    width: 150px;
-    height: 40px;
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-
-  .btn-section {
-    font-size: 18px;
-    height: 100px;
-    width: 100%;
-  }
-
-  .section {
-    padding: 0 5px;
-  }
-
-  .img-section {
-    max-width: 100%;
-    height: auto; /* Убедиться, что изображения масштабируются */
-  }
-
-  .text-section {
-    font-size: 12px;
-  }
-  .img-section {
-    max-width: 100%;
-    height: auto;
-  }
-  .details-section {
-    font-size: 10px;
-  }
-  .menu-info {
-    text-align: center;
-  }
-  .info-contacts {
-    text-align: center;
+  .first-section {
+    margin-bottom: 80px;
   }
 }

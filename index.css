@@ -130,7 +130,7 @@ img {
   position: relative;
   width: 1150px;
   height: 500px;
-  background-image: url(./resources/Rectangle1.png);
+  background-image: url("./resources/Rectangle1.png");
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 150px;
@@ -323,7 +323,7 @@ img {
 /* Начало под услуги */
 .full-screen-img {
   height: 717px;
-  background-image: url(./resources/image.png);
+  background-image: url("./resources/image.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
